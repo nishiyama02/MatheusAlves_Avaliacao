@@ -6,9 +6,18 @@
 //  Copyright © 2018 matheus.n.alves. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Alamofire
 
 class WeatherViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    fileprivate var locations: [Location]!
+    
+    
+    
+    
+    
+    
     
 }

@@ -13,7 +13,7 @@ class Weather {
     var weatherStateName: String?
     var weatherStateAbbr: String?
     var windDirectionCompass: String?
-//    var applicationDate: String?
+    var applicationDate: String?
     var minTemp: Double?
     var maxTemp: Double?
     var temp: Double?
@@ -24,11 +24,25 @@ class Weather {
     var visibility: Double?
     var predictability: Int?
 
+    init(applicationDate: String?) {
+        self.applicationDate = applicationDate
+    }
     
-    init(weatherStateName: String?, weatherStateAbbr: String?, temp: Double?) {
+    init(weatherStateName: String?, weatherStateAbbr: String?, applicationDate: String?, temp: Double?) {
         self.weatherStateName = weatherStateName
         self.weatherStateAbbr = weatherStateAbbr
+        self.applicationDate = applicationDate
         self.temp = temp
     }
+    
+    func getTemperature() -> String{
+        if let temp = self.temp{
+            return String.init(format: "%.0f°", temp)
+        }
+        else{
+            return "null"
+        }
+    }
+
     
 }
