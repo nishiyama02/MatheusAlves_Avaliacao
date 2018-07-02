@@ -23,6 +23,7 @@ class ModelFactory{
     }
     
     class func createWeather(fromJson json: NSDictionary) -> Weather? {
+        
         if let applicationDate = json["applicable_date"] as? String{
             let weather = Weather(applicationDate: applicationDate)
             if let weatherStateName = json["weather_state_name"] as? String{
